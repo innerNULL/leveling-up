@@ -18,6 +18,7 @@ Proposed an algorithm called **EmbedRank** used for keyphrase extraction.
     * Even we need fine-tune encoder model with domain specific, we do not need labeled dataset.
 
 ### Cons
+* It's based on text segmentation, for short text summarization scenario, it's hard to segment it into phrases. 
 * When key-points in source document takes smaller amount of text, it's hard to retrive it based on semantic similarity with source document.
 * Key points are not necessarily highly related with full document.
 
