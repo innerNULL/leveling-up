@@ -22,6 +22,7 @@ Proposed an algorithm called **EmbedRank** used for keyphrase extraction.
 * Key points are not necessarily highly related with full document.
 
 ## Algorithm
+### Steps
 * Candidate Phrases Extraction
     * Calculate embedding $Q$ for full document.
     * Split text into phrases
@@ -39,3 +40,28 @@ Proposed an algorithm called **EmbedRank** used for keyphrase extraction.
           * Calculate **MMR** with **informativeness** score and **redundancy** score: $MMR = \lambda \cdot Cos(C_i, doc) - (1 - \lambda) \cdot max_{D_j \in S}Cos(C_i, C_j)$. 
       * Select candidate with highest $MMR$ and insert it into $S$
   * Get final extracted keyphrases.
+
+### Flowchart
+```mermaid
+graph TD;
+    A(Input Document) --> B(Phrases);
+    B --> |Encoder| E{{Cosine}}
+    A --> |Encoder| E 
+    E --> F(Phrase Informativeness Scores)
+    F --> |Top-N| H(Candidate Phrases)
+    I(Selected Keyphrases)
+    I --> J[[Enough Keyphrase?]]
+    H --> |Encoder| K{{MMR}}
+    J --> |No| K
+    A --> |Encoder| K
+    K --> |Top-K| I
+    J --> |Yes| L(Final Keyphrases)
+```
+
+## Implementations
+The most convinent implementation is [KeyBERT](https://github.com/MaartenGr/KeyBERT). Even though this is not specifically developed according to the paper, by tuning the parameters we can make the logic align with this paper.
+
+
+## Something to Discover
+* How performance change before and after fine-tuning encoder model?
+* Besides cosine similarity, is there any better ranking metrics?
