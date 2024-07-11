@@ -37,8 +37,8 @@ Proposed an algorithm called **EmbedRank** used for keyphrase extraction.
   * While need selecting more keyphrase:
       * For each candidate phrases $C_i$:
           * Calculate **informativeness** score: $Cos(C_i, doc)$, the higher the better.
-          * Calculate **redundancy** score: $max_{D_j \in S}Cos(C_i, C_j)$.
-          * Calculate **MMR** with **informativeness** score and **redundancy** score: $MMR = \lambda \cdot Cos(C_i, doc) - (1 - \lambda) \cdot max_{D_j \in S}Cos(C_i, C_j)$. 
+          * Calculate **redundancy** score: $max_{C_j \in S}Cos(C_i, C_j)$.
+          * Calculate **MMR** with **informativeness** score and **redundancy** score: $MMR = \lambda \cdot Cos(C_i, doc) - (1 - \lambda) \cdot max_{C_j \in S}Cos(C_i, C_j)$. 
       * Select candidate with highest $MMR$ and insert it into $S$
   * Get final extracted keyphrases.
 
