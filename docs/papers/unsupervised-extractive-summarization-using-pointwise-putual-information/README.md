@@ -40,7 +40,7 @@ Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sent
     * $k$: Final target is to select top-$k$ keyphrases at most.
     * $\lambda_1$: Weight of **relevance (informativeness) score.
     * $\lambda_2$: Weight of **redundancy score**.
-* Will $S$ contains less than $k$ phrases:
+* **Greedy Sequential Selection**, while $S$ contains less than $k$ phrases:
     * For each phrase $s$ in splitted phrase, calculate it's **importancy score**:
         * **Relevance(Informativeness) Score**: $pmi_{{relevance}}(s_i; d) = log \dfrac{p_{LM}(d|s)}{p_{LM}(d)}$
         * **Redundancy Score**: $pmi_{{redundancy}}(s_i; s_j) = log \dfrac{p_{LM}(s_j|s_i)}{p_{LM}(s_j)}, if\space i < j$, where $i, j$ are phrase indexs in $s$. According PMI defination, we just set $pmi_{{redundancy}}(s_i; s_j) = pmi_{{redundancy}}(s_j; s_i), if\space i > j$. 
