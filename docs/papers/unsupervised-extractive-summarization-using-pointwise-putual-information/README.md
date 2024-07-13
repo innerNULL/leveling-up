@@ -37,8 +37,8 @@ Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sent
 * **Segmentation**: Split source text $doc$ into sentences/phrases.
 * **Initialize Variables**
     * $S$: Selected keyphrases, initialized as an empty set.
-    * $k$: Final target is to select top-$k$ keyphrases at most.
-    * $\lambda_1$: Weight of **relevance (informativeness) score.
+    * $k$: Final target is to select top $k$ keyphrases at most.
+    * $\lambda_1$: Weight of **relevance (informativeness) score**.
     * $\lambda_2$: Weight of **redundancy score**.
 * **Greedy Sequential Selection**, while $S$ contains less than $k$ phrases:
     * For each phrase $s$ in splitted phrase, calculate it's **importancy score**:
