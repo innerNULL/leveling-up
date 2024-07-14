@@ -4,14 +4,15 @@
 
 ## Overview
 Similar with [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), this work also decouple the criteria of keyphrases selection into to dimension: **relevance(informativeness)** and **redundancy**. 
-  
-**Note**:
-* Semantive similarity based methods are **similarity based**, so need **decoder only** model to get vector representation of document and phrases.
-* The proposed **PMI** based methods is **probability based**, so instead of decoder-only model, it relies on generative LM (**decoder-only or encoder-decoder models**).
+
 
 ## Innovations
 ### Not Using Semantic Similarity
 Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), instead of using **semantic similarity**, this work proposed a noval approach, which uses **pointwise mutual information(PMI)** to quantify **relevance** and **redundancy**.
+
+**Note**:
+* Semantive similarity based methods are **similarity based**, so need **decoder only** model to get vector representation of document and phrases.
+* The proposed **PMI** based methods is **probability based**, so instead of decoder-only model, it relies on generative LM (**decoder-only or encoder-decoder models**).
 
 ### Migrate PMI Defination to Text Data with LM (Language Model)
 #### Notations
