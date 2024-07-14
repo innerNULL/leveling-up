@@ -66,3 +66,7 @@ The most convinent implementation is [KeyBERT](https://github.com/MaartenGr/KeyB
 ## Something to Discover
 * How performance change before and after fine-tuning encoder model?
 * Besides cosine similarity, is there any better ranking metrics?
+
+
+## Next Reading
+* [Unsupervised Extractive Summarization using Pointwise Mutual Information](https://github.com/innerNULL/notes/tree/main/docs/papers/unsupervised-extractive-summarization-using-pointwise-putual-information)
