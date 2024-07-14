@@ -4,6 +4,10 @@
 
 ## Overview
 Similar with [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), this work also decouple the criteria of keyphrases selection into to dimension: **relevance(informativeness)** and **redundancy**. 
+  
+**Note**:
+* Semantive similarity based methods are **similarity based**, so need **decoder only** model to get vector representation of document and phrases.
+* The proposed **PMI** based methods is **probability based**, so instead of decoder-only model, it relies on generative LM (**decoder-only or encoder-decoder models**).
 
 ## Innovations
 ### Not Using Semantic Similarity
@@ -27,7 +31,8 @@ Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sent
 * How to migrate PMI calculation on text data?
     * The key part of PMI is how to calculate **conditional probability** (for text data) $p_{LM}(text_i|text_j)$.
     * For language model (LM), it's easy to understand $p_{LM}(text_i|text_j)$ as the probability of $text_i$ when using $text_j$ as prefix, so:
-        * $p_{LM}(text_i|text_j) = \dfrac{p(text_i, text_j)}{p(text_j)} = \dfrac{p(concat(text_j, text_i))}{p(text_j)}$ 
+        * $p_{LM}(text_i|text_j) = \dfrac{p(text_i, text_j)}{p(text_j)} = \dfrac{p(concat(text_j, text_i))}{p(text_j)}$
+    * $p(text)$ can be calculated by any generative LM (**docoder-only, encoder-decoder** model).
 * Why can use PMI as metric for keyphrase selection? 
     * It's natural to view $text_i$ as redundency of $text_j$ when we has higher probability to infer $text_i$ from $text_j$.
 
