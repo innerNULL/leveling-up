@@ -61,15 +61,15 @@ input_text((Source Doc)) --> |text segmentation| phrases(Phrases)
 phrases --> concat2{{Concat Source Doc and Candidate Phrase}} 
 input_text --> concat2
 phrases --> concat1{{Concat Extracted Phrase and Candidate Phrase}} 
-extractions(Extracted Phrases) --> concat1 
+extractions(Extracted Phrases) --> condition1[[Has K Extracted Phrases]]
+condition1 --> |No, Coninue Iteration| concat1 
 concat2 --> |generative LM| pmi_relevance(PMI Relevance Score)
 concat1 --> |generative LM| pmi_redundancy(PMI Redundancy Score)
 pmi_relevance --> pmi(PMI Score)
 pmi_redundancy --> pmi
 pmi --> |top-1| curr_candidate(Current Iteration Candidate)
-curr_candidate --> condition1[[Has K Extracted Phrases]]
-condition1 --> |No, Insert To| extractions
-condition1 --> |Yes, Break| final((Final Results)) 
+curr_candidate --> extractions
+condition1 --> |Yes, Break| final((Final Results))
 ```
 
 
