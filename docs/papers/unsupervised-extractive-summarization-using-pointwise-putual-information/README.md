@@ -57,7 +57,7 @@ Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sent
 ### Flowchart
 ```mermaid
 graph TD;
-input_text(Source Document) --> |text segmentation| phrases(Phrases)
+input_text((Source Doc)) --> |text segmentation| phrases(Phrases)
 phrases --> concat2{{Concat Source Doc and Candidate Phrase}} 
 input_text --> concat2
 phrases --> concat1{{Concat Extracted Phrase and Candidate Phrase}} 
@@ -69,7 +69,7 @@ pmi_redundancy --> pmi
 pmi --> |top-1| curr_candidate(Current Iteration Candidate)
 curr_candidate --> condition1[[Has K Extracted Phrases]]
 condition1 --> |No, Insert To| extractions
-condition1 --> |Yes, Break| final(Final Extracted Phrases) 
+condition1 --> |Yes, Break| final((Final Results)) 
 ```
 
 
