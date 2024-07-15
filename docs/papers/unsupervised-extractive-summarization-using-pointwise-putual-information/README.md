@@ -1,4 +1,4 @@
-# Paper Note -- Unsupervised Extractive Summarization using Pointwise Mutual Information
+# Paper Note -- [Unsupervised Extractive Summarization using Pointwise Mutual Information](https://arxiv.org/abs/2102.06272)
 ## Relevant Works (Pre-Reading)
 * [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings)
 
@@ -53,6 +53,23 @@ Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sent
         * **Importancy Score**: $\Delta(s_i) = \lambda_1 \cdot pmi_{{relevance}}(s_i; d) + \lambda_2 \cdot \sum_{s'  \in S} pmi_{{redundancy}}(s'; s_i)$
     * Select Most Important Phrase: Insert $\arg \max_{s_i \in doc}  \Delta(s_i)$ into $S$.
 * $S$ is the final results, which contains $k$ extracted most important phrases.
+
+### Flowchart
+```mermaid
+graph TD;
+input_text(Source Document) --> |text segmentation| phrases(Phrases)
+input_text --> concat2{{Concat Source Doc and Candidate Phrase}}
+phrases --> concat1{{Concat Extracted Phrase and Candidate Phrase}} 
+extractions(Extracted Phrases) --> concat1 
+concat2 --> |generative LM| pmi_relevance(PMI Relevance Score)
+concat1 --> |generative LM| pmi_redundancy(PMI Redundancy Score)
+pmi_relevance --> pmi(PMI Score)
+pmi_redundancy --> pmi
+pmi --> |top-1| curr_candidate(Current Iteration Candidate)
+curr_candidate --> condition1[[Has K Extracted Phrases]]
+condition1 --> |No, Insert To| extractions
+condition1 --> |Yes| final(Final Extracted Phrases) 
+```
 
 
 ## Implementations
