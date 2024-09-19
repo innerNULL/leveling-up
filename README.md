@@ -5,7 +5,7 @@ I just using github + markdowns to manage my personal publicly accessible notes.
 
 ## Activities
 ### 2024 Q3
-#### 2024-09-19n23:39:00 -- Paper Reading
+#### 2024-09-19 23:39:00 -- Paper Reading
 Read paper [Parameter-Efficient Transfer Learning for NLP](https://github.com/innerNULL/notes/tree/main/docs/papers/parameter-efficient-transfer-learning-for-nlp). 
 The approach is too simple even boring, but seems like it's effective and can 
 help to understand what's a basic **adapter**.
