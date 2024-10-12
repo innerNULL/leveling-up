@@ -4,6 +4,13 @@ I just using github + markdowns to manage my personal publicly accessible notes.
 
 
 ## Activities
+### 2024 Q4
+#### 2024-10-12 12:37:00 -- Paper Reading
+Read paper [Large Language Models Are Human-Level Prompt Engineers](https://github.com/innerNULL/notes/tree/main/docs/papers/large-language-models-are-human-level-prompt-engineers).
+The idea is of auto prompt engineering is interesting, but the use case is kind of limited as it:
+* Needs Labeled training data
+* Can not optimize prompt in sentence or paragraph level granularity. 
+
 ### 2024 Q3
 #### 2024-09-19 23:39:00 -- Paper Reading
 Read paper [Parameter-Efficient Transfer Learning for NLP](https://github.com/innerNULL/notes/tree/main/docs/papers/parameter-efficient-transfer-learning-for-nlp). 
