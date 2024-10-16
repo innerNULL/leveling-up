@@ -1,6 +1,6 @@
 # My Notes
-Simple is good, but controllable is best. So instead of using static side framework, 
-I just using github + markdowns to manage my personal publicly accessible notes.
+**Simple is good, but controllable is the best**. So instead of using static site framework, 
+I just using github + markdowns to manage my personal learning notes.
 
 
 ## Activities
