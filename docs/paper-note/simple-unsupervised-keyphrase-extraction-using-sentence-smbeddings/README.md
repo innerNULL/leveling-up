@@ -69,4 +69,4 @@ The most convinent implementation is [KeyBERT](https://github.com/MaartenGr/KeyB
 
 
 ## Next Reading
-* [Unsupervised Extractive Summarization using Pointwise Mutual Information](https://github.com/innerNULL/notes/tree/main/docs/papers/unsupervised-extractive-summarization-using-pointwise-putual-information)
+* [Unsupervised Extractive Summarization using Pointwise Mutual Information](https://github.com/innerNULL/leveling-up/tree/main/docs/paper-note/unsupervised-extractive-summarization-using-pointwise-putual-information)

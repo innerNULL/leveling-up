@@ -1,14 +1,14 @@
 # Paper Note -- [Unsupervised Extractive Summarization using Pointwise Mutual Information](https://arxiv.org/abs/2102.06272)
 ## Relevant Works (Pre-Reading)
-* [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings)
+* [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/leveling-up/tree/main/docs/paper-note/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings)
 
 ## Overview
-Similar with [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), this work also decouple the criteria of keyphrases selection into to dimension: **relevance(informativeness)** and **redundancy**. 
+Similar with [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/leveling-up/tree/main/docs/paper-note/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), this work also decouple the criteria of keyphrases selection into to dimension: **relevance(informativeness)** and **redundancy**. 
 
 
 ## Innovations
 ### Not Using Semantic Similarity
-Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/notes/tree/main/docs/papers/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), instead of using **semantic similarity**, this work proposed a noval approach, which uses **pointwise mutual information(PMI)** to quantify **relevance** and **redundancy**.
+Comprare with previous work [Simple Unsupervised Keyphrase Extraction using Sentence Embeddings](https://github.com/innerNULL/leveling-up/tree/main/docs/paper-note/simple-unsupervised-keyphrase-extraction-using-sentence-smbeddings), instead of using **semantic similarity**, this work proposed a noval approach, which uses **pointwise mutual information(PMI)** to quantify **relevance** and **redundancy**.
 
 **Note**:
 * Semantive similarity based methods are **similarity based**, so need **decoder only** model to get vector representation of document and phrases.
